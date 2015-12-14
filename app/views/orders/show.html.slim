@@ -1,0 +1,15 @@
+/ p#notice = notice
+
+p
+  strong Amount:
+  = @order.amount
+p
+  strong Product price:
+  = @order.product_price
+p
+  strong Product:
+  = @order.product
+
+= link_to 'Edit', edit_order_path(@order)
+'|
+= link_to 'Back', orders_path
