@@ -13,4 +13,22 @@ html
       == render 'layouts/navigation'
     main[role="main"]
       == render 'layouts/messages'
-      == yield
+      #wrapper
+        #sidebar-wrapper
+          ul.sidebar-nav
+            li.sidebar-brand
+              a[href="/"]
+                | example app 
+            li
+              a[href="/visitors/about"]
+                | About
+            li
+              a[href="#"]
+                | Shortcuts
+        #page-content-wrapper
+          .container-fluid
+            .row
+              .col-lg-12
+                == yield
+  script
+    |  $("#menu-toggle").click(function(e) { e.preventDefault(); $("#wrapper").toggleClass("toggled"); }); 

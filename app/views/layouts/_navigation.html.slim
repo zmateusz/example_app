@@ -7,7 +7,9 @@ nav.navbar.navbar-inverse.navbar-fixed-top
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      = link_to 'Home', root_path, class: 'navbar-brand'
+      h4  
+        a#menu-toggle.navbar-brand[href="#"]
+          span.glyphicon.glyphicon-menu-hamburger
     .collapse.navbar-collapse
       ul.nav.navbar-nav
         == render 'layouts/navigation_links'
